@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularz</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link href="normalize.css" rel="stylesheet" type="text/css">
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+  <main>
+    <h1>formularz testowy</h1>
+    <form class="form" action="https://dev.cotenfrontend.pl" method="post">
+      <p class="form__line">
+        <label class="form-description" for="name">imię:</label>
+        <input class="form__item" id="name" placeholder="podaj imię" type="text" name="name"><!--ta metoda łatwiejsza do ostylowania-->
+      </p>
+
+      <p class="form__line">
+        <label class="form-description" for="surname">nazwisko:</label>
+        <input class="form__item" id="surname" placeholder="podaj nazwisko" type="text" name="surname">
+      </p>
+
+      <p class="form__line">
+        <label class="form-description" for="tel">telefon:</label>
+        <input class="form__item" id="tel" placeholder="XXX-XXX-XXX" type="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
+      </p>
+
+      <p class="form__line">
+        <label class="form-description" for="email">e-mail:</label>
+        <input class="form__item" id="email" placeholder="podaj adres e-mail" type="email" name="email" required>
+      </p>
+
+      <fieldset class="fieldset">
+        <legend class="fieldset__description">Adres</legend>
+        <p class="form__line">
+          <label class="form-description" for="street">ulica:</label>
+          <input class="form__item" id="street" placeholder="podaj nazwę ulicy" type="text" name="street">
+        </p>
+        <p class="form__line">
+          <label class="form-description" for="house-number">numer domu:</label>
+          <input class="form__item" id="house-number" placeholder="podaj numer domu" name="house-number" >
+        </p>
+        <p class="form__line">
+          <label class="form-description" for="flat-number">numer mieszkania:</label>
+          <input class="form__item" id="flat-number" placeholder="podaj numer mieszkania" name="flat-number" >
+        </p>
+        <p class="form__line">
+          <label class="form-description" for="postal-code">kod pocztowy:</label>
+          <input class="form__item" id="postal-code" placeholder="podaj kod pocztowy" name="postal-code" pattern="[0-9]{2}-[0-9]{3}">
+        </p>
+        <p class="form__line">
+          <label class="form-description" for="city">miasto:</label>
+          <input class="form__item" id="city" placeholder="podaj miasto" type="text" name="city">
+        </p>
+      </fieldset>
+
+      <fieldset class="fieldset--radio">
+        <legend class="fieldset__description">ulubiony display CSS:</legend>
+        <p class="form__line--radio">
+          <input class="form__item--radio" id="block" value="block" type="radio" name="fav-display">
+          <label class="form-description" for="block">block</label>
+        </p>
+        
+        <p>
+          <input class="form__item--radio" id="inline-block" value="inline-block" type="radio" name="fav-display">
+          <label class="form-description" for="inline-block">inline-block</label>
+        </p>
+
+        <p>
+          <input class="form__item--radio" id="flex" value="flex" type="radio" name="fav-display">
+          <label class="form-description" for="flex">flex</label>
+        </p>
+
+        <p>
+          <input class="form__item--radio" id="grid" value="grid" type="radio" name="fav-display">
+          <label class="form-description" for="grid">grid</label>
+        </p>
+      </fieldset>
+      <p class="agreement">Wyrażam zgodę na wpisanie mnie na listę kandydatów do Akademii Gwiezdnej Floty.</p>
+      <p class="agreement__input">
+        <input class="form__item--checkbox" id="agree" checked type="checkbox" name="agree"></input>
+        <label class="form-description" for="agree">Zgadzam się</label>
+      </p>
+
+
+      <p>
+          <input class="form__item--send" type="submit" name="submit" value="Send">
+      </p>
+     
+
+
+      
+    </form>
+  </main>
+  
+</body>
+</html>
