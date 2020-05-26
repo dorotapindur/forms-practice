@@ -7,16 +7,15 @@ html {
   }
 
 body {
-    background-color: #afafaf;
-    background-image: linear-gradient(132deg, #ffffff 0%, #afafaf 100%);
+    background-color: #758500;
     background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif
-  }
+    font-family: 'Baloo Chettan 2', cursive;
+}
 
 main {
     display: flex;
@@ -25,14 +24,18 @@ main {
     flex-flow: column;
     height: auto;
     min-height: 100vh;
-    background-color: #ffffff;
-    background-image: linear-gradient(270deg, #ffffff 0%, #bdbdbd 100%);
+    background: #758500;
+    box-shadow: inset -12px 12px 12px #4b5500, 
+               inset 12px -12px 12px #9fb500;
+    border-radius: 10px; 
+    margin: 50px 0; 
+    padding: 20px;
 }
 h1 {
     display: inline-block;
     font-size: 22px;
     text-transform: uppercase;
-    color: #00535a;
+    color:#1b1f00; 
 }
 .form {
     display: inline-block;
@@ -47,72 +50,94 @@ h1 {
     padding: 0 10px;
 }
 .form-description {
-    color: #013135;
+    color:#1b1f00; 
     grid-area: form-description; 
-    font-weight: bold;  
+    font-weight: bold; 
+    align-items: baseline;
+    display: flex;
+    align-items: center;
 }
 .form__item {
     width: 100%;  
-    color:#6ad6bb; 
-    background-color: #013135; 
+    color:#e1ff00; 
+    background: #758500;
+    box-shadow: inset -4px 4px 4px #4b5500, 
+                inset 4px -4px 4px #9fb500; 
     grid-area: form__item;
     border-radius: 6px;
+    border: none;
     padding-left: 5px;
 }
 .form__item::placeholder {
-    color: #13646d;
+    color: #adc400;
 }
 .form__item--send {
     display: block;
-    width: 100px;
+    width: auto;
     margin: auto;
-    color:#6ad6bb; 
-    background-color: #016a74; 
+    color:#e1ff00; 
+    background: linear-gradient(225deg, #7d8e00, #697800);
+    box-shadow:  -5px 5px 10px #4b5500, 
+                 5px -5px 10px #9fb500; 
     border-radius: 6px;
+    border: none;
     margin-top: 40px;
-    padding: 5px;
+    padding: 5px 15px;
 }
 .fieldset {
     text-align: center;
-    border-color: #013135;
+    background: #758500;
+    box-shadow:  -5px 5px 10px #4b5500, 
+                 5px -5px 10px #9fb500; 
     border-radius: 10px;
+    border: none;
     margin: 20px;
 }
 .fieldset__description {
     font-weight: bold;
     text-transform: uppercase;
-    color: #013135;
+    transform: translate(0, 20px);/*wsuwa opis do środka pola fieldset*/
+    color:#1b1f00;
     margin: auto;
-    padding: 0 5px;
+    padding: 20px;
 }
 .fieldset--radio {
     display: block;
     text-align: left;
-    padding-left: 40px;
-    border-color: #013135;
+    background: #758500;
+    box-shadow: inset -8px 8px 16px #4b5500, 
+               inset 8px -8px 16px #9fb500;
     border-radius: 10px;
+    border: none;
     margin: auto;
     width: 50%;
 }
-
+.form-description--radio {
+    color:#1b1f00; 
+    grid-area: form-description; 
+    font-weight: bold; 
+    align-items: baseline;
+}
 .form__item--radio {
+    display: inline-block;
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
-    border: solid 2px;
-    border-color: rgb(138, 138, 138) whitesmoke whitesmoke rgb(138, 138, 138);
     border-radius: 50%;
-    color: #6ad6bb; 
-    background-color: #013135; 
-    padding-right: 5px;
+    background: linear-gradient(225deg, #7d8e00, #697800);
+    box-shadow:  -5px 5px 10px #4b5500, 
+                 5px -5px 10px #9fb500;
+    margin-right: 10px;
+    margin-left: 40px;
     vertical-align: middle;
 }
-.form__item--radio:checked,
-.form__item--checkbox:checked {
-    background-color: #6ad6bb; 
+.form__item--radio:checked {
+    background: #abc200;
+    box-shadow: inset -2px 2px 4px #6d7c00, 
+                inset 2px -2px 4px #e9ff00;
 }
 .agreement {
-    color: #013135;
+    color:#1b1f00;
     padding: 20px;
     text-align: center;
 
@@ -122,14 +147,36 @@ h1 {
 }
 .form__item--checkbox {
     -webkit-appearance: none;
+    position: relative;
     width: 20px;
     height: 20px;
-    border: solid 2px;
-    border-color: rgb(138, 138, 138) whitesmoke whitesmoke rgb(138, 138, 138);
-    border-radius: 50%;
-    color: #6ad6bb; 
-    background-color: #013135; 
-    padding-right: 5px;
+    border-radius: 5px;
+    background: linear-gradient(225deg, #7d8e00, #697800);
+    box-shadow:  -5px 5px 10px #4b5500, 
+                 5px -5px 10px #9fb500;
+    margin-right: 10px;
     vertical-align: middle;
 }
-
+.form__item--checkbox:checked {  
+    background: #abc200;
+    box-shadow: inset -2px 2px 4px #6d7c00, 
+                inset 2px -2px 4px #e9ff00;
+}
+.form__item--checkbox:checked::before {
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    /* check from Font Awesome */
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+    color: rgb(134, 0, 0);
+}
+.form-description--checkbox {
+    color:#1b1f00; 
+    grid-area: form-description; 
+    font-weight: bold; 
+    align-items: baseline;
+}
