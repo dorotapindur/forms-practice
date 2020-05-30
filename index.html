@@ -13,7 +13,7 @@
 
 <body>
   <div class="embellishment embellishment--left">formularz</div>
-  <div class="embellishment embellishment--right">formularz</div>  
+  <div class="embellishment embellishment--right">formularz</div>
   <main>
     <h1>formularz testowy</h1>
     <form class="form" action="https://dev.cotenfrontend.pl" method="post">
@@ -83,9 +83,16 @@
           <label class="form-description--radio" for="grid">grid</label>
         </p>
       </fieldset>
+
+      <p class="form__line">
+        <label class="form-description" for="essay">Napisz kilka słów o sobie:</label>
+        <textarea class="form__item" id="essay" type="text" name="essay"></textarea>
+      </p>
+
+
       <p class="agreement">Wyrażam zgodę na wpisanie mnie na listę kandydatów do Akademii Gwiezdnej Floty oraz na przetwarzanie moich danych osobowych w celach rekrutacyjnych.</p>
       <p class="agreement__input">
-        <input class="form__item--checkbox" id="agree" checked="" type="checkbox" name="agree"></input>
+        <input class="form__item--checkbox" id="agree" checked="" type="checkbox" name="agree">
         <label class="form-description--checkbox" for="agree">Zgadzam się</label>
       </p>
 
@@ -99,6 +106,8 @@
       
     </form>
   </main>
+
+  <script src="main.js"></script>
   
 </body>
 </html>

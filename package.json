@@ -1,0 +1,25 @@
+{
+  "name": "formularze",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cow": "cowsay strzeżcie się aktualizacji npm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dorotapindur/forms-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dorotapindur/forms-practice/issues"
+  },
+  "homepage": "https://github.com/dorotapindur/forms-practice#readme",
+  "devDependencies": {
+    "cowsay": "^1.4.0",
+    "node-sass": "^4.14.1"
+  }
+}
