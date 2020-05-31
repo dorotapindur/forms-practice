@@ -18,6 +18,18 @@
     <h1>formularz testowy</h1>
     <form class="form" action="https://dev.cotenfrontend.pl" method="post">
       <p class="form__line">
+        <label class="form__description" for="title">tytuł:</label>
+        <select class="form__item" id="title" name="title">
+          <option class="form__option" value="" selected>--wybierz tytuł--</option>
+          <option class="form__option" value="pani">pani</option>
+          <option class="form__option" value="pan">pan</option>
+          <option class="form__option" value="inż">inżynier</option>
+          <option class="form__option" value="mgr">magister</option>
+          <option class="form__option" value="dr">doktor</option>
+          <option class="form__option" value="pfof">profesor</option>
+        </select>
+      </p>
+      <p class="form__line">
         <label class="form__description" for="name">imię:</label>
         <input class="form__item" id="name" placeholder="podaj imię" type="text" name="name"><!--ta metoda łatwiejsza do ostylowania-->
       </p>
@@ -62,7 +74,7 @@
       </fieldset>
 
       <fieldset class="fieldset--radio">
-        <legend class="fieldset__description">ulubiony display CSS:</legend>
+        <legend class="fieldset__description">ulubiony display:</legend>
         <p class="form__line--radio">
           <input class="form__item--radio" id="block" value="block" type="radio" name="fav-display">
           <label class="form__description--radio" for="block">block</label>
@@ -79,14 +91,44 @@
         </p>
 
         <p>
-          <input class="form__item--radio" id="grid" value="grid" type="radio" name="fav-display">
+          <input class="form__item--radio" id="grid" value="grid" type="radio" name="fav-display" checked>
           <label class="form__description--radio" for="grid">grid</label>
         </p>
       </fieldset>
 
-      <p class="form__line">
+      <p class="form__line--essay">
         <label class="form__description--essay" for="essay">Napisz kilka słów o sobie:</label>
         <textarea class="form__item form__item--essay" id="essay" type="text" name="essay"></textarea>
+      </p>
+
+      <div class="form__line">
+        <label class="form__description--age" for="age">wiek:</label>
+        <div class="range-wrapper">
+        <input class="range" id="age" type="range" name="age" min="18" max="118" list="years">
+          <datalist id="years" class="range__datalist">
+            <option class="range__option" value="18" label="18"></option>
+            <option class="range__option" value="28" label="|"></option>
+            <option class="range__option" value="38" label="|"></option>
+            <option class="range__option" value="48" label="|"></option>
+            <option class="range__option" value="58" label="|"></option>
+            <option class="range__option" value="68" label="68"></option>
+            <option class="range__option" value="78" label="|"></option>
+            <option class="range__option" value="88" label="|"></option>
+            <option class="range__option" value="98" label="|"></option>
+            <option class="range__option" value="108" label="|"></option>
+            <option class="range__option" value="118" label="118"></option>
+          </datalist> 
+        </div>
+      </div>
+
+      <p class="form__line">
+        <label class="form__description" for="photo">załącz swoje zdjęcie:</label>
+        <input class="form__item" id="photo" placeholder="załącz swoje zdjęcie" type="file" name="photo" accept=".jpg, .jpeg, .png">
+      </p>
+
+      <p class="form__line">
+        <label class="form__description" for="password">hasło:</label>
+        <input class="form__item" id="password" placeholder="podaj hasło" type="password" name="password">
       </p>
 
 
