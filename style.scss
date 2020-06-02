@@ -6,8 +6,12 @@ html {
     box-sizing: inherit;
   }
 
+:root {
+  --my-background: #758500;
+}
+
 body {
-    background-color: #758500;
+    background-color: var(--my-background);
     background-attachment: fixed;
     display: flex;
     align-items: center;
@@ -224,7 +228,8 @@ h1 {
     }
 }
 .range-wrapper {
-    grid-area: form__item; 
+    grid-area: form__item;
+    position: relative; 
 }
 .range {  
     &__datalist {
@@ -233,6 +238,16 @@ h1 {
     }
     &__option {
         color: #adc400;
+    }
+    &__output {
+        background: red;
+        color: white;
+        padding: 6px 12px;
+        position: absolute;
+        border-radius: 4px;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);        
     }
 }
 

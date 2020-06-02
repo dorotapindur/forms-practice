@@ -103,8 +103,8 @@
 
       <div class="form__line">
         <label class="form__description--age" for="age">wiek:</label>
-        <div class="range-wrapper">
-        <input class="range" id="age" type="range" name="age" min="18" max="118" list="years">
+        <div class="range-wrapper range-wrapper--js">
+        <input class="range range--js" id="age" type="range" name="age" min="18" max="118" list="years">
           <datalist id="years" class="range__datalist">
             <option class="range__option" value="18" label="18"></option>
             <option class="range__option" value="28" label="|"></option>
@@ -118,6 +118,7 @@
             <option class="range__option" value="108" label="|"></option>
             <option class="range__option" value="118" label="118"></option>
           </datalist> 
+        <output class="range__output bubble--js"></output>
         </div>
       </div>
 
