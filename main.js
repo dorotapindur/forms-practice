@@ -1,4 +1,4 @@
-const allRanges = document.querySelectorAll(".range-wrap");
+const allRanges = document.querySelectorAll(".range-wrapper");
 allRanges.forEach(wrap => {
   const range = wrap.querySelector(".range--js");
   const bubble = wrap.querySelector(".bubble--js");
