@@ -44,4 +44,18 @@ out.innerHTML = day + "/" + month + "/" + year;
 
 //
 
+let isDark = false;
+console.log(isDark);
+const modeButton = document.querySelector('.change-mode--js');
+modeButton.addEventListener('click', () => {
 
+  if (isDark == true) {
+    document.documentElement.style.setProperty('--my-background', 'white');
+    isDark = false;
+  }
+  else {
+    document.documentElement.style.setProperty('--my-background', 'black');
+    isDark = true;
+  }
+  console.log('działa!!!')
+})

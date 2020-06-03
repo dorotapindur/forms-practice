@@ -94,10 +94,10 @@ main {
 .change-mode {
   grid-column: 2;
   justify-self: end;
+  align-self: center;
   width: max-content;
   height: max-content;
-  align-self: center;
-  color:var(--label); 
+  color: var(--label); 
   background: linear-gradient(225deg, var(--gradient-from), var(--gradient-to));
   box-shadow:  -5px 5px 10px var(--shadow), 
                5px -5px 10px var(--light); 
@@ -106,11 +106,11 @@ main {
   padding: 5px 15px;
   &:hover {
     cursor: pointer;
+  }
   &:active {
     background: var(--checked-background);
     box-shadow: inset -2px 2px 4px var(--checked-shadow), 
                 inset 2px -2px 4px var(--checked-light);
-  }
   }
 }
 
