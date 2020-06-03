@@ -8,6 +8,17 @@ html {
 
 :root {
 --my-background: #758500;
+--shadow: #4b5500;
+--light: #9fb500;
+--label: #1b1f00;
+--placeholder: #adc400;
+--light-text: #e1ff00;
+--gradient-from: #7d8e00;
+--gradient-to: #697800;
+--checked-background: #abc200;
+--checked-shadow: #6d7c00;
+--checked-light: #e9ff00;
+--range-thumb-shadow: #c3d400;
 }
 
 body {
@@ -24,21 +35,21 @@ body {
 
 .embellishment {
   font-size: 120px;
-  color: #7d8e00;
+  color: var(--gradient-from);
   position: absolute;
   &--left {
       top: 300px;
       left: 300px;
       transform: rotate(-90deg);
-      text-shadow:  -3px -3px 5px #4b5500, 
-                   3px 3px 4px #9fb500; 
+      text-shadow:  -3px -3px 5px var(--shadow), 
+                   3px 3px 4px var(--light); 
   }
   &--right {
       bottom: 300px;
       right: 300px;
       transform: rotate(90deg);
-      text-shadow:  3px 3px 5px #4b5500, 
-                   -3px -3px 4px #9fb500; 
+      text-shadow:  3px 3px 5px var(--shadow), 
+                   -3px -3px 4px var(--light); 
   }
 }
 
@@ -49,9 +60,9 @@ main {
   flex-flow: column;
   height: auto;
   min-height: 100vh;
-  background: #758500;
-  box-shadow: inset -12px 12px 12px #4b5500, 
-             inset 12px -12px 12px #9fb500;
+  background: var(--my-background);
+  box-shadow: inset -12px 12px 12px var(--shadow), 
+             inset 12px -12px 12px var(--light);
   border-radius: 10px; 
   margin: 50px 0; 
   padding: 20px;
@@ -61,16 +72,16 @@ main {
   display: inline-block;
   font-size: 50px;
   text-transform: uppercase;
-  color: #7d8e00;
-  text-shadow:  -3px 3px 4px #4b5500, 
-               2px -2px 4px #9fb500; 
+  color: var(--gradient-from);
+  text-shadow:  -3px 3px 4px var(--shadow), 
+               2px -2px 4px var(--light); 
   margin-bottom: 0;    
 }
 .practice-header {
-  color: #1b1f00;
+  color: var(--label);
 }
 .current-date {
-  color: #9fb500;
+  color: var(--light);
 
 }
 .form {
@@ -91,25 +102,25 @@ main {
       }
   }
   &__description {
-      color:#1b1f00; 
+      color:var(--label); 
       grid-area: form-description; 
       font-weight: bold; 
       display: flex;
       align-items: center;
       &--radio {
-          color:#1b1f00; 
+          color:var(--label); 
           grid-area: form-description; 
           font-weight: bold; 
           align-items: baseline;
       }
       &--checkbox {
-          color:#1b1f00; 
+          color:var(--label); 
           grid-area: form-description; 
           font-weight: bold; 
           align-items: baseline;
       }
       &--essay {
-          color:#1b1f00; 
+          color:var(--label); 
           grid-area: form-description; 
           font-weight: bold; 
           text-align: center;
@@ -117,30 +128,30 @@ main {
           margin: 10px;
       }
       &--age {
-          color:#1b1f00; 
+          color:var(--label); 
       }
   }
   &__item {
       width: 100%;  
-      color:#e1ff00; 
-      background: #758500;
-      box-shadow: inset -4px 4px 4px #4b5500, 
-                  inset 4px -4px 4px #9fb500; 
+      color:var(--light-text); 
+      background: var(--my-background);
+      box-shadow: inset -4px 4px 4px var(--shadow), 
+                  inset 4px -4px 4px var(--light); 
       grid-area: form__item;
       border-radius: 6px;
       border: none;
       padding-left: 5px;
       &::placeholder {
-          color: #adc400;
+          color: var(--placeholder);
       }
       &--send {
           display: block;
           width: auto;
           margin: auto;
-          color:#e1ff00; 
-          background: linear-gradient(225deg, #7d8e00, #697800);
-          box-shadow:  -5px 5px 10px #4b5500, 
-                       5px -5px 10px #9fb500; 
+          color:var(--light-text); 
+          background: linear-gradient(225deg, var(--gradient-from), var(--gradient-to));
+          box-shadow:  -5px 5px 10px var(--shadow), 
+                       5px -5px 10px var(--light); 
           border-radius: 6px;
           border: none;
           margin-top: 40px;
@@ -152,16 +163,16 @@ main {
           width: 20px;
           height: 20px;
           border-radius: 50%;
-          background: linear-gradient(225deg, #7d8e00, #697800);
-          box-shadow:  -5px 5px 10px #4b5500, 
-                       5px -5px 10px #9fb500;
+          background: linear-gradient(225deg, var(--gradient-from), var(--gradient-to));
+          box-shadow:  -5px 5px 10px var(--shadow), 
+                       5px -5px 10px var(--light);
           margin-right: 10px;
           margin-left: 40px;
           vertical-align: middle;
           &:checked {
-              background: #abc200;
-              box-shadow: inset -2px 2px 4px #6d7c00, 
-                          inset 2px -2px 4px #e9ff00;
+              background: var(--checked-background);
+              box-shadow: inset -2px 2px 4px var(--checked-shadow), 
+                          inset 2px -2px 4px var(--checked-light);
           }
       }
       &--checkbox {
@@ -170,15 +181,15 @@ main {
           width: 20px;
           height: 20px;
           border-radius: 5px;
-          background: linear-gradient(225deg, #7d8e00, #697800);
-          box-shadow:  -5px 5px 10px #4b5500, 
-                       5px -5px 10px #9fb500;
+          background: linear-gradient(225deg, var(--gradient-from), var(--gradient-to));
+          box-shadow:  -5px 5px 10px var(--shadow), 
+                       5px -5px 10px var(--light);
           margin-right: 10px;
           vertical-align: middle;
           &:checked {  
-              background: #abc200;
-              box-shadow: inset -2px 2px 4px #6d7c00, 
-                          inset 2px -2px 4px #e9ff00;
+              background: var(--checked-background);
+              box-shadow: inset -2px 2px 4px var(--checked-shadow), 
+                          inset 2px -2px 4px var(--checked-light);
               &::before {
                   position: absolute;
                   top: 5px;
@@ -196,17 +207,17 @@ main {
       &--essay {
           display: block;
           height: 180px;
-          box-shadow: inset -5px 5px 10px #4b5500, 
-                      inset 5px -5px 10px #9fb500;
+          box-shadow: inset -5px 5px 10px var(--shadow), 
+                      inset 5px -5px 10px var(--light);
       }
   }
 }
 
 .fieldset {
   text-align: center;
-  background: #758500;
-  box-shadow:  -5px 5px 10px #4b5500, 
-               5px -5px 10px #9fb500; 
+  background: var(--my-background);
+  box-shadow:  -5px 5px 10px var(--shadow), 
+               5px -5px 10px var(--light); 
   border-radius: 10px;
   border: none;
   margin: 20px;
@@ -214,16 +225,16 @@ main {
       font-weight: bold;
       text-transform: uppercase;
       transform: translate(0, 20px);/*wsuwa opis do środka pola fieldset*/
-      color:#1b1f00;
+      color:var(--label);
       margin: auto;
       padding: 20px;
   }
   &--radio {
       display: block;
       text-align: left;
-      background: #758500;
-      box-shadow: inset -5px 5px 10px #4b5500, 
-                 inset 5px -5px 10px #9fb500;
+      background: var(--my-background);
+      box-shadow: inset -5px 5px 10px var(--shadow), 
+                 inset 5px -5px 10px var(--light);
       border-radius: 10px;
       border: none;
       margin: auto;
@@ -232,7 +243,7 @@ main {
 }
 
 .agreement {
-  color:#1b1f00;
+  color:var(--label);
   padding: 20px;
   text-align: center;
   &__input {
@@ -249,12 +260,12 @@ main {
       justify-content: space-between;
   }
   &__option {
-      color: #adc400;
+      color: var(--placeholder);
   }
   &__output {
-      background: linear-gradient(225deg, #7d8e00, #697800);
-      box-shadow:  -5px 5px 10px #4b5500;
-      color: #1b1f00;
+      background: linear-gradient(225deg, var(--gradient-from), var(--gradient-to));
+      box-shadow:  -5px 5px 10px var(--shadow);
+      color: var(--label);
       padding: 4px 8px;
       position: absolute;
       border-radius: 4px;
@@ -307,43 +318,43 @@ input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 10px;
   cursor: pointer;
-  box-shadow: inset -3px 3px 3px #4b5500, 
-              inset 3px -3px 3px #9fb500;
-  background: #758500;
+  box-shadow: inset -3px 3px 3px var(--shadow), 
+              inset 3px -3px 3px var(--light);
+  background: var(--my-background);
   border-radius: 3px;
-  border: 0px solid #010101;
+  border: 0px solid;
 }
 input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1.8px 1.8px 5.9px #e9ff00, 0px 0px 1.8px #c3d400;
-  border: 2.9px solid #e9ff00;
+  box-shadow: 1.8px 1.8px 5.9px var(--checked-light), 0px 0px 1.8px var(--range-thumb-shadow);
+  border: 2.9px solid var(--checked-light);
   height: 5px;
   width: 13px;
   border-radius: 24px;
-  background: #e9ff00;
+  background: var(--checked-light);
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: 2px;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #758500;
+  background: var(--my-background);
 }
 input[type=range]::-moz-range-track {
   width: 100%;
   height: 10px;
   cursor: pointer;
-  box-shadow: inset -3px 3px 3px #4b5500, 
-              inset 3px -3px 3px #9fb500;
-  background: #758500;
+  box-shadow: inset -3px 3px 3px var(--shadow), 
+              inset 3px -3px 3px var(--light);
+  background: var(--my-background);
   border-radius: 3px;
-  border: 0px solid #010101;
+  border: 0px solid;
 }
 input[type=range]::-moz-range-thumb {
-  box-shadow: 1.8px 1.8px 5.9px #e9ff00, 0px 0px 1.8px #c3d400;
-  border: 2.9px solid #e9ff00;
+  box-shadow: 1.8px 1.8px 5.9px var(--checked-light), 0px 0px 1.8px var(--range-thumb-shadow);
+  border: 2.9px solid var(--checked-light);
   height: 5px;
   width: 13px;
   border-radius: 24px;
-  background: #e9ff00;
+  background: var(--checked-light);
   cursor: pointer;
 }
 input[type=range]::-ms-track {
@@ -355,30 +366,30 @@ input[type=range]::-ms-track {
   color: transparent;
 }
 input[type=range]::-ms-fill-lower {
-  background: #758500;
-  border: 0px solid #010101;
+  background: var(--my-background);
+  border: 0px solid;
   border-radius: 0px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  box-shadow: 1px 1px 1px, 0px 0px 1px ;
 }
 input[type=range]::-ms-fill-upper {
-  background: #758500;
-  border: 0px solid #010101;
+  background: var(--my-background);
+  border: 0px solid ;
   border-radius: 0px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  box-shadow: 1px 1px 1px , 0px 0px 1px;
 }
 input[type=range]::-ms-thumb {
-  box-shadow: 1.8px 1.8px 5.9px #e9ff00, 0px 0px 1.8px #c3d400;
-  border: 2.9px solid #e9ff00;
+  box-shadow: 1.8px 1.8px 5.9px var(--checked-light), 0px 0px 1.8px var(--range-thumb-shadow);
+  border: 2.9px solid var(--checked-light);
   width: 13px;
   border-radius: 24px;
-  background: #e9ff00;
+  background: var(--checked-light);
   cursor: pointer;
   height: 5px;
 }
 input[type=range]:focus::-ms-fill-lower {
-  background: #758500;
+  background: var(--my-background);
 }
 input[type=range]:focus::-ms-fill-upper {
-  background: #758500;
+  background: var(--my-background);
 }
 

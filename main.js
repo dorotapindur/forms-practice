@@ -24,7 +24,7 @@ function setBubble(range, bubble) {
 //end
 
 console.log(`It's working!`);
-
+//date
 var today = new Date();
 
 var day = today.getDate();
@@ -41,3 +41,7 @@ if (month < 10) {
 var out = document.getElementById("output");
 
 out.innerHTML = day + "/" + month + "/" + year;
+
+//
+
+
