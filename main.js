@@ -45,7 +45,13 @@ out.innerHTML = day + "/" + month + "/" + year;
 //
 
 let isDark = false;
-console.log(isDark);
+
+function createContent (querySelectorContent, content) {
+  const element = document.querySelector(querySelectorContent);
+  element.innerHTML = content;
+}
+createContent ('.change-mode--js', 'tryb ciemny')
+
 const modeButton = document.querySelector('.change-mode--js');
 modeButton.addEventListener('click', () => {
 
@@ -63,6 +69,8 @@ modeButton.addEventListener('click', () => {
     document.documentElement.style.setProperty('--checked-light', '#e9ff00');
     document.documentElement.style.setProperty('--range-thumb-shadow', '#c3d400');
 
+    createContent ('.change-mode--js', 'tryb ciemny')
+    
     isDark = false;
   }
   else {
@@ -78,6 +86,8 @@ modeButton.addEventListener('click', () => {
     document.documentElement.style.setProperty('--checked-shadow', '#6d7c00');
     document.documentElement.style.setProperty('--checked-light', '#e9ff00');
     document.documentElement.style.setProperty('--range-thumb-shadow', '#c3d400');
+
+    createContent ('.change-mode--js', 'tryb jasny')
 
     isDark = true;
   }
