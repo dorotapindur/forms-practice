@@ -201,7 +201,8 @@ main {
     .form__item--essay {
       display: block;
       height: 180px;
-      box-shadow: inset -5px 5px 10px var(--shadow), inset 5px -5px 10px var(--light); }
+      box-shadow: inset -5px 5px 10px var(--shadow), inset 5px -5px 10px var(--light);
+      padding: 10px; }
 
 .fieldset {
   text-align: center;
