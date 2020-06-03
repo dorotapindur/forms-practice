@@ -27,8 +27,7 @@ body {
   justify-content: center;
   padding: 0;
   margin: 0;
-  font-family: 'Baloo Chettan 2', cursive;
-  position: relative; }
+  font-family: 'Baloo Chettan 2', cursive; }
 
 .embellishment {
   font-size: 120px;
@@ -36,12 +35,12 @@ body {
   position: absolute; }
   .embellishment--left {
     top: 300px;
-    left: 300px;
+    left: -340px;
     transform: rotate(-90deg);
     text-shadow: -3px -3px 5px var(--shadow), 3px 3px 4px var(--light); }
   .embellishment--right {
     bottom: 300px;
-    right: 300px;
+    right: -340px;
     transform: rotate(90deg);
     text-shadow: 3px 3px 5px var(--shadow), -3px -3px 4px var(--light); }
 
@@ -65,7 +64,7 @@ main {
   text-transform: uppercase;
   color: var(--gradient-from);
   text-shadow: -3px 3px 4px var(--shadow), 2px -2px 4px var(--light);
-  margin-bottom: 0; }
+  margin-bottom: 20px; }
 
 .practice-header {
   color: var(--label); }
