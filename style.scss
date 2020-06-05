@@ -19,6 +19,7 @@ html {
 --checked-shadow: #6d7c00;
 --checked-light: #e9ff00;
 --range-thumb-shadow: #c3d400;
+--custom-color: #7d8e00;
 }
 
 
@@ -34,23 +35,35 @@ body {
 }
 
 .embellishment {
+  color: var(--custom-color);
   font-size: 120px;
-  color: var(--gradient-from);
   position: absolute;
+  @media (max-width: 900px) {
+    font-size: 70px;
+  }
   &--left {
       top: 300px;
       left: -340px;
       transform: rotate(-90deg);
       text-shadow:  -3px -3px 5px var(--shadow), 
                    3px 3px 4px var(--light); 
+      @media (max-width: 900px) {   
+        top: 910px;
+        left: -100px;
+      }
   }
   &--right {
       bottom: 300px;
       right: -340px;
       transform: rotate(90deg);
       text-shadow:  3px 3px 5px var(--shadow), 
-                   -3px -3px 4px var(--light); 
+                   -3px -3px 4px var(--light);
+      @media (max-width: 900px) {
+        bottom: 845px;
+        right: -100px;
+      } 
   }
+  
 }
 
 main {
@@ -67,6 +80,9 @@ main {
   margin: 50px 0; 
   padding: 20px;
   position: relative;
+  @media (max-width: 900px) {
+    width: 90vw;
+  }
 }
 .main-header {
   display: inline-block;
@@ -115,7 +131,8 @@ main {
 }
 
 .form {
-  display: inline-block;
+  display: flex;
+  flex-flow: column;
   width: 600px;
   &__line {
       display: grid;
@@ -129,6 +146,11 @@ main {
       }
       &--photo {
         margin: 40px 0;
+      }
+      &--color {
+        margin-top: 40px;
+        width: 40%;
+        align-self: center;
       }
   }
   &__description {
@@ -240,6 +262,10 @@ main {
           box-shadow: inset -5px 5px 10px var(--shadow), 
                       inset 5px -5px 10px var(--light);
           padding: 10px;
+      }
+      &--color {
+        padding: 5px;
+        height: 2.5em;
       }
   }
 }

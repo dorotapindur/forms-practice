@@ -1,4 +1,4 @@
-
+//range showing value in a bubble - from the internet
 
 const allRanges = document.querySelectorAll(".range-wrapper");
 allRanges.forEach(wrap => {
@@ -21,10 +21,11 @@ function setBubble(range, bubble) {
   // Sorta magic numbers based on size of the native UI thumb
   bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
 }
-//end
 
 console.log(`It's working!`);
+
 //date
+
 var today = new Date();
 
 var day = today.getDate();
@@ -42,7 +43,7 @@ var out = document.getElementById("output");
 
 out.innerHTML = day + "/" + month + "/" + year;
 
-//
+//change mode button
 
 let isDark = false;
 
@@ -50,7 +51,7 @@ function createContent (querySelectorContent, content) {
   const element = document.querySelector(querySelectorContent);
   element.innerHTML = content;
 }
-createContent ('.change-mode--js', 'tryb ciemny')
+createContent ('.change-mode--js', 'tryb ciemny');
 
 const modeButton = document.querySelector('.change-mode--js');
 modeButton.addEventListener('click', () => {
@@ -93,3 +94,11 @@ modeButton.addEventListener('click', () => {
   }
   console.log('działa!!!')
 })
+
+//color picker
+var theInput = document.getElementById("color");
+   
+theInput.addEventListener("input", function() {
+  var theColor = theInput.value;
+  document.documentElement.style.setProperty('--custom-color', theColor);
+});
